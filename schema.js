@@ -6,10 +6,11 @@ const typeDefs = `
 type Author {
   age: Int
   name: String
-  Books: [String]
+  books: [String]
 }
 type Query {
-  author: [Author]
+  authors: [Author]
+  author(age: Int): Author
 }
 `;
 
