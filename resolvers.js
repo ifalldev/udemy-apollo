@@ -9,6 +9,7 @@ const resolvers = {
     },
     author: (root, { id }) => {
       // return authors.find(author => author.id === id);
+      return Author.find({ id });
     }
   },
   Mutation: {
@@ -20,6 +21,10 @@ const resolvers = {
 
     deleteAuthor: (root, { id }) => {
       return Author.findOneAndRemove({ id });
+    },
+
+    updateAuthor: (root, args) => {
+      return Author.findOneAndUpdate({ id: args.id }, args);
     }
   }
 }
