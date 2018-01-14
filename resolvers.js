@@ -5,6 +5,7 @@ const resolvers = {
   Query: {
     authors: () => {
       // return authors;
+      return Author.find({});
     },
     author: (root, { id }) => {
       // return authors.find(author => author.id === id);
@@ -15,6 +16,10 @@ const resolvers = {
       // save author
       const author = new Author({ age, name, books });
       return author.save();
+    },
+
+    deleteAuthor: (root, { id }) => {
+      return Author.findOneAndRemove({ id });
     }
   }
 }
