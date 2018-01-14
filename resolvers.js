@@ -9,7 +9,8 @@ const resolvers = {
     },
     author: (root, { id }) => {
       // return authors.find(author => author.id === id);
-      return Author.find({ id });
+
+      return Author.findOne({ id });
     }
   },
   Mutation: {
