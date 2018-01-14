@@ -5,7 +5,7 @@ import schema from './schema';
 import mongoose from 'mongoose';
 
 const server = express();
-const MONGO_URI = 'mongodb://fall93:q1w2e3@ds255797.mlab.com:55797/fall93-apollo'
+const MONGO_URI = 'mongodb://fall:q1w2e3@ds255797.mlab.com:55797/fall93-apollo'
 
 server.use('/graphiql', graphiqlExpress({
   endpointURL: '/graphql'

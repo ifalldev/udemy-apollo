@@ -1,4 +1,4 @@
-import moongose from 'mongoose';
+import mongoose from 'mongoose';
 import uuid from 'node-uuid';
 
 const Schema = mongoose.Schema;
@@ -14,4 +14,4 @@ const authorSchema = new Schema({
   books: [String]
 });
 
-export default Schema
+export default mongoose.model('author', authorSchema);
